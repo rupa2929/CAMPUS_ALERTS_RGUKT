@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.btn{
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+.btn.click{
+  left: 260px;
+}
+.btn span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+.btn.click span:before{
+  content: '\f00d';
+}
+.sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #1b1b1b;
+  transition: left 0.4s ease;
+}
+.sidebar.show{
+  left: 0px;
+}
+.sidebar .text{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 1px;
+}
+
+nav ul{
+  background: #1b1b1b;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li{
+  line-height: 60px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+nav ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li.active a{
+  color: cyan;
+  background: #1e1e1e;
+  border-left-color: cyan;
+}
+nav ul li a:hover{
+  background: #1e1e1e;
+}
+nav ul ul{
+  position: static;
+  display: none;
+}
+nav ul .feat-show.show{
+  display: block;
+}
+nav ul .serv-show.show1{
+  display: block;
+}
+nav ul ul li{
+  line-height: 42px;
+  border-top: none;
+}
+nav ul ul li a{
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 80px;
+}
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: #1b1b1b;
+  border-left-color: transparent;
+}
+nav ul ul li a:hover{
+  color: cyan!important;
+  background: #1e1e1e!important;
+}
+nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #202020;
+  z-index: -1;
+  text-align: center;
+}
+.content .header{
+  font-size: 45px;
+  font-weight: 600;
+}
+.content p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* services*/
+
+.container h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .services{
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .services .card{
+  width: 330px;
+  text-align: center;
+  background: #222;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .services .card:hover{
+  background: chocolate;
+}
+
+.container .services .card .content{
+  transition: 0.3s;
+}
+
+.container .services .card:hover .content{
+  transform: scale(1.07);
+}
+
+.container .services .card .content .icon{
+  padding: 5px 0;
+  color: white;
+}
+
+.container .services .card .content .icon i{
+  font-size: 40px;
+}
+
+.container .services .card:hover .content .title{
+  color: white;
+}
+
+.container .services .card .content .title{
+  padding: 5px 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: chocolate;
+  transition: 0.3s;
+}
+/*.service-button{
+ margin-top:20px;
+ margin-left:938px;
+ font-size:15px;
+ text-decoration:none;
+ color:chocolate;
+ background-color:#222;
+ padding:8px 12px;
+ border-radius:5px;
+ letter-spacing:1px;
+}
+.service-button:hover{
+background-color:chocolate;
+transition:0.3s ease;
+color:#fff;
+text-decoration:underline;
+}*/
+.king{
+  font-size:70px;
+  font-weight:bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(82, 82, 129);
+  margin-right: 700px;
+  margin-top: 100px;
+}
+.servicecontainer h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.servicecontainer .services{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap:wrap;
+
+  align-items: stretch;
+
+}
+
+
+.servicecontainer .services .severvicecard{
+  flex-basis: calc(33.33% - 20px);
+
+  text-align: center;
+  background:lightblue;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.servicecontainer .services .severvicecard:hover{
+  background:white;
+}
+
+.servicecontainer .services .severvicecard .servicecontent{
+  transition: 0.3s;
+}
+
+.servicecontainer .services .severvicecard:hover .servicecontent{
+  transform: scale(1.07);
+}
+
+.servicecontainer .services .severvicecard .servicecontent .icon{
+  padding: 5px 0;
+  color:black;
+}
+
+.servicecontainer .services .severvicecard .servicecontent .icon i{
+  font-size: 40px;
+}
+
+.servicecontainer .services .severvicecard:hover .servicecontent .title{
+  color: black;
+}
+
+.servicecontainer .services .severvicecard .servicecontent .title{
+  padding: 5px 0;
+  font-size: 24px;
+  font-weight: 500;
+  color:black;
+  transition: 0.3s;
+}
+.servicebutton{
+ margin-top:20px;
+ margin-left:870px;
+ font-size:15px;
+ text-decoration:none;
+ color:whitesmoke;
+ background-color:#222;
+ padding:8px 12px;
+ border-radius:5px;
+ letter-spacing:1px;
+}
+.servicebutton:hover{
+background-color:black;
+transition:0.3s ease;
+color:#fff;
+text-decoration:underline;
+}
+
+/* contact us*/
+
+.hello{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+h1 {
+  color: #333;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+textarea {
+  height: 150px;
+}
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+  background-color: #555;
+}
+.contact-info {
+  text-align: center;
+  margin-top: 40px;
+}
+.contact-info p {
+  font-size: 16px;
+}
+/* home css*/
+.quote{
+  font-size: 30px;
+  font-weight: 900;
+  font-style:normal;
+  margin-top: -100px;
+  margin-left:100px;
+  color:chocolate;
+
+}
+.paragraphhomepage{
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 50px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+/* academic*/
+#academicsbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.academics-hidden {
+  display: none;
+}
+
+#academicssendMessageBtn, #academicsviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#academicssendMessageBtn:hover, #academicsviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.academics-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:630px;
+  margin-top:100px;
+  
+ 
+}
+.academics-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-academic{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}
+/* scholarship*/
+#scholarbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scholar-hidden {
+  display: none;
+}
+
+#scholarsendMessageBtn, #scholarviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#scholarsendMessageBtn:hover, #scholarviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.scholar-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:630px;
+  margin-top:100px;
+  
+ 
+}
+.scholar-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-scholar{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}
+
+/*mess */
+
+#messbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mess-hidden {
+  display: none;
+}
+
+#messsendMessageBtn, #messviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#messsendMessageBtn:hover, #messviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.mess-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:630px;
+  margin-top:100px;
+  
+ 
+}
+.mess-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-mess{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}
+
+/*hostell*/
+#hostelbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hostel-hidden {
+  display: none;
+}
+
+#hostelsendMessageBtn, #hostelviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#hostelsendMessageBtn:hover, #hostelviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.hostel-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:630px;
+  margin-top:100px;
+  
+ 
+}
+.hostel-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-hostel{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}
+/* game and sports */
+#gamesAsportsbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gamesAsports-hidden {
+  display: none;
+}
+
+#gamesAsportssendMessageBtn, #gamesAsportsviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#gamesAsportssendMessageBtn:hover, #gamesAsportsviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.gamesAsports-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:640px;
+  margin-top:100px;
+  
+ 
+}
+.gamesAsports-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-gamesAsports{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}
+
+/*events*/
+#eventsbuttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.events-hidden {
+  display: none;
+}
+
+#eventssendMessageBtn, #eventsviewMessageBtn {
+  background-color: #3498db; /* Blue color for the buttons */
+  color: #fff; /* White text color */
+  padding: 15px 30px; /* Increase button size */
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#eventssendMessageBtn:hover, #eventsviewMessageBtn:hover {
+  background-color: #2980b9; /* Darker blue for button hover */
+}
+
+.events-img{
+ 
+  max-width:fit-content;
+  height: auto;
+  border: 3px solid #4a4040;
+  border-radius:2px;
+  padding: 1px;
+  display:block;
+  width:100%;
+  position:relative;
+  margin-left:630px;
+  margin-top:100px;
+  
+ 
+}
+.events-text{
+  position:absolute;
+  top:230px;
+  left:880px;
+
+  font-size:35px;
+}
+.info-events{
+  font-size: 30px;
+  margin-top: -300px;
+  margin-right:700px;
+
+
+}

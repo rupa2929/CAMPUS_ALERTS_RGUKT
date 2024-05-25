@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+}
+
+:root{
+    --mainColor:#89216b;
+    --whiteColor:#ffffff;
+    --titleColor:#555555;
+    --labelColor:#333333;
+    
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+}
+.small-logo{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top:3%;
+    left:2%;
+}
+.head{
+    font-size:25px;
+    font-weight: bold;
+    position: absolute;
+    top: 4%;
+    left:10%;
+    color:lightblack;
+
+}
+.sub-head{
+    font-size:15px;
+    font-weight: bold;
+    position: absolute;
+    top: 8%;
+    left:15%;
+    color:lightblack;
+
+}
+.content h2{
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing:2px;
+    color:black;
+}
+.content h2 span{
+    color:aliceblue;
+    border-color: black;
+    border-width: 20px;
+
+
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+
+}
+.content p{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+body{
+    background:url(./background.jpeg);
+    background-size: cover;
+    margin-top: 40px;
+    margin-left: 900px;
+    font-weight: 400;
+    min-height: 100vh;
+    display:grid;
+    place-content:center;
+    overflow: hidden;
+}
+.wrapper{
+    position:relative;
+    width: 35rem;
+    height:50rem;
+
+}
+@media(min-width:540px) {
+    .wrapper{
+        width:40rem;
+    }
+}
+.wrapper .form-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    background-color: var(--whiteColor);
+    border-radius:.5rem;
+    box-shadow:0 0 1rem 0 rgba(0 0 0/ .2);
+}
+.wrapper .form-container form h2{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--titleColor);
+} 
+.wrapper .form-container form .form-group{
+    position:relative;
+    width:32rem;
+    margin:3rem 0; 
+
+}
+.wrapper .form-container form .form-group input{
+    width:100%;
+    height:4rem;
+    padding:0 1rem;
+    border-radius:.5rem;
+    border: none;
+    outline: none;
+    border: .1rem solid var(--labelColor) ;
+    font-size:1.6rem;
+    color: var(--labelColor);
+    background: transparent;
+}
+.wrapper .form-container form .forgot-pass{
+    margin: -1.5rem 0 1.5rem;
+
+}
+.wrapper .form-container form .forgot-pass a{
+    color:var(--labelColor);
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transform: all .5s ease;
+}
+.wrapper .form-container form .forgot-pass a:hover{
+    color: var(--mainColor);
+}
+.wrapper .form-container form .btn{
+    background:linear-gradient(to right,#da4453,var(--mainColor));
+    color:var(--whiteColor);
+    text-transform: capitalize;
+    width:100%;
+    height:4rem;
+    font-size:1.6rem ;
+    font-weight:500;
+    outline:none;
+    border:none;
+    border-radius: 2rem;
+    cursor:pointer;
+    box-shadow:0 .2rem 1rem rgba(0 0 0 / .4);
+}
+.wrapper .form-container form .link{
+    text-align: center;
+    font-size:1.4rem;
+    color:var(--labelColor);
+    margin:2.5rem 0;
+}
+.wrapper .form-container form .link a{
+    text-transform: capitalize;
+    color:var(--mainColor);
+    text-decoration: none;
+    font-weight:600;
+    transition:all .5s ease;
+}
+.wrapper .form-container form .link a:hover{
+    color:#da4453;
+}
+.wrapper .sign-up{
+    transform: rotate(3.5deg);
+}
+.wrapper .forgot{
+    transform: rotate(7deg);
+}
+.wrapper.animated-signin .form-container.sign-in {
+    animation: signin-flip 1s ease-in-out forwards;
+}
+@keyframes signin-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-signin .form-container.sign-up {
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}   
+.wrapper.animated-signup .form-container.sign-up{
+    animation: signup-flip 1s ease-in-out forwards;
+}
+@keyframes signup-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-signup .form-container.sign-in {
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}   
+
+.wrapper.animated-forgot .form-container.sign-in {
+    animation: signin-flip 1s ease-in-out forwards;
+}
+@keyframes signin-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-forgot .form-container.forgot{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}   
+
+.wrapper.animated-signn .form-container.sign-up {
+    animation: signin-flip 1s ease-in-out forwards;
+}
+@keyframes signin-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-signn .form-container.sign-in{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}   
+
+.wrapper.animated-sign .form-container.forgot {
+    animation: sign-flip 1s ease-in-out forwards;
+}
+@keyframes sign-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-sign .form-container.sign-in{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+.wrapper.animated-student .form-container.sign-up {
+    animation: signup-flip 1s ease-in-out forwards;
+}
+@keyframes signup-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-student .form-container.student{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+.wrapper.animated-teacher .form-container.sign-up {
+    animation: signup-flip 1s ease-in-out forwards;
+}
+@keyframes signup-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+.wrapper.animated-teacher .form-container.teacher{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+.btnr{
+    background:linear-gradient(to right,#da4453,var(--mainColor));
+    color:var(--whiteColor);
+    text-transform: capitalize;
+    width:100%;
+    height:6rem;
+    margin: 30px;
+    margin-left: -10px;
+    font-size:2.0rem ;
+    font-weight:500;
+    outline:none;
+    border:none;
+    border-radius: 2rem;
+    cursor:pointer;
+    box-shadow:0 .2rem 1rem rgba(0 0 0 / .4);
+}  
+.btnr :hover{
+    background:#89216b;
+} 
+.questions-form 
+{
+    margin-top: 10px;
+}
+.questions-form label{
+    font-size: 22px;
+    display: block;
+}
+.questions-form select{
+    width: 80%;
+    height: 27px;
+}
+.stu-head{
+    position: absolute;
+    top: 4%;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--titleColor);
+}
+.btns{
+    background:linear-gradient(to right,#da4453,var(--mainColor));
+    color:var(--whiteColor);
+    text-transform: capitalize;
+    width:100%;
+    height:3rem;
+    font-size:1rem ;
+    font-weight:500;
+    outline:none;
+    border:none;
+    border-radius: 2rem;
+    cursor:pointer;
+    box-shadow:0 .2rem 1rem rgba(0 0 0 / .4);
+    margin-top: 5px;
+}
+
+#stu-regi{
+    display: none;
+}
+.rad{
+    font-size: 30px;
+}
+.wrapper.student.questions-form.btn{
+    text-align: center;
+}
